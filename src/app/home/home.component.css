@@ -1,0 +1,12 @@
+.search-control {
+    margin-top: 20px;
+}
+
+.search-control .search-include-retired label {
+    font-size: 16px;
+}
+.search-control .form-check-input {
+    position: static;
+    margin-left: 0;
+    margin-right: .3rem;
+}

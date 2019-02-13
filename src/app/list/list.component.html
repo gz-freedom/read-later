@@ -1,0 +1,33 @@
+<!-- <div class="search-control input-group input-group-lg">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+  </div>
+  <input type="text" class="form-control" placeholder="search">
+  <div class="input-group-append">
+    <div class="input-group-text form-group form-check search-include-retired">
+      <input type="checkbox" class="form-check-input" id="include-retired">
+      <label class="form-check-label" for="include-retired">Include Retired</label>
+    </div>
+  </div>
+</div> -->
+<div class="btn-group mt-4">
+  <button class="btn btn-secondary">全部</button>
+  <button class="btn btn-light">未读</button>
+</div>
+<ul class="list-unstyled read-list">
+  <li class="read-item" *ngFor="let item of articles">
+    <h3 class="title">
+      <i class="fas fa-link"></i>
+      <a class='url' href="{{ item.url }}" target="_blank">{{ item.title }}</a>
+    </h3>
+    <p class='description'>{{ item.updated_date | date }}</p>
+    <div class="tags">
+      <span class='tag' *ngFor="let tag of item.tags"><i class="fas fa-tag"></i> {{ tag }}</span>
+    </div>
+    <span class="tools-bar">
+      <i class="fas fa-edit" title="编辑"></i>
+      <i class="fas fa-trash-alt" title="删除"></i>
+      <i class="fas fa-check-circle" title="标记为已读"></i>
+    </span>
+  </li>
+</ul>

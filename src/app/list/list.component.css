@@ -1,0 +1,57 @@
+.read-list {
+    border: #ccc dashed 1px;
+    margin-top: 20px;
+}
+.read-list .read-item {
+    padding: 20px;
+    border-bottom: #ccc dashed 1px;
+    position: relative;
+    overflow: hidden;
+}
+.read-list .read-item:last-child {
+    border-bottom: none;
+}
+.read-list .title {
+    color: #c33;
+}
+.read-list .description {
+    color: #666;
+}
+.read-list .url {
+    color: #c33;
+    margin-left: 10px;
+}
+.read-list .tags {
+    font-size: 12px;
+}
+.read-list .tags  .tag {
+    display: inline-block;
+    background-color: #666;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.read-list .tags .tag:hover {
+    background-color: #333;
+}
+.read-list .tools-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 100%;
+    border-left: #ccc dashed 1px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.read-list .tools-bar.fas {
+    height: 30px;
+    line-height: 30px;
+}
+  
+.read-list .tools-bar.fas:hover {
+    color: #c33;
+    cursor: pointer;
+}
