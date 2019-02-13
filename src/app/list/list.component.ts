@@ -12,7 +12,6 @@ export class ListComponent implements OnInit {
 
   ngOnInit() {
     this.rs.getArticles().subscribe(res => {
-      console.log(res);
       this.articles = res;
     })
   }

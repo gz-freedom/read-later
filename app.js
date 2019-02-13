@@ -5,7 +5,6 @@ const express = require('express'),
 
 const routes = require('./routes/readlater');
 mongoose.Promise = global.Promise;
-//mongoose.connect("mongodb://jimmy:pf634811@ds046267.mlab.com:46267/readlater", { useNewUrlParser: true }).then(
 mongoose.connect("mongodb://localhost:27017/read-later", { useNewUrlParser: true }).then(
     () => {console.log('Database is connected') },
     err => { console.log('Can not connect to the database '+ err)}
