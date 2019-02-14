@@ -1,16 +1,16 @@
 <div class="row mt-4">
   <div class="col-md-4">
       <div class="btn-group">
-        <button class="btn btn-secondary">全部</button>
-        <button class="btn btn-light">未读</button>
+        <button class="btn btn-secondary" (click)="filterArticles('all')">全部</button>
+        <button class="btn btn-light" (click)="filterArticles('unread')">未读</button>
       </div>
   </div>
   <div class="col-md-8">
-    <div class="search-control input-group">
+    <div class="search-control input-group" [formGroup]="searchGroup">
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
         </div>
-        <input type="text" class="form-control" placeholder="search">
+        <input type="text" class="form-control" placeholder="search" (keyup)="filterArticles('search')" formControlName="searchStr" #searchStr>
       </div>
   </div>
 </div>
