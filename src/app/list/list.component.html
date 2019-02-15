@@ -1,8 +1,8 @@
 <div class="row mt-4">
   <div class="col-md-4">
       <div class="btn-group">
-        <button class="btn btn-secondary" (click)="filterArticles('all')">全部</button>
-        <button class="btn btn-light" (click)="filterArticles('unread')">未读</button>
+        <button class="btn btn-light" (click)="filterArticles('all')" [class.selected]="filterType === 'all'">全部</button>
+        <button class="btn btn-light" (click)="filterArticles('unread')" [class.selected]="filterType === 'unread'">未读</button>
       </div>
   </div>
   <div class="col-md-8">
@@ -25,9 +25,9 @@
       <span class='tag' *ngFor="let tag of item.tags"><i class="fas fa-tag"></i> {{ tag }}</span>
     </div>
     <span class="tools-bar">
-      <i class="fas fa-edit" title="编辑"></i>
-      <i class="fas fa-trash-alt" title="删除"></i>
-      <i class="fas fa-check-circle" title="标记为已读"></i>
+      <!-- <i class="fas fa-edit" title="编辑"></i> -->
+      <i class="fas fa-trash-alt" title="删除" (click)="deleteArticle(item._id)"></i>
+      <i class="fas fa-check-circle" title="标记为已读" *ngIf="!item.read" (click)="markAsRead(item._id)"></i>
     </span>
   </li>
 </ul>

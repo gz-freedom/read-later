@@ -18,4 +18,12 @@ export class ReadService {
   getArticles() {
     return this.http.get(`http://localhost:4000/get`)
   }
+
+  updateArticle(obj) {
+    return this.http.post(`http://localhost:4000/update/${obj.id}`, obj);
+  }
+
+  deleteArticle(id) {
+    return this.http.get(`http://localhost:4000/delete/${id}`);
+  }
 }
